@@ -101,9 +101,9 @@ font-size:20px;
 }
 
 .banner{
-    /* width:100%;
-    height:auto; */
-    background-image:url(images/pexels-quintin-gellar-313782.jpg);
+    width: 80%;
+    height:auto;
+    background-image:url(images/image_6487327.JPG);
     background-size:cover;
     background-position:60%;
     border-radius:10px;
@@ -119,7 +119,7 @@ font-size:20px;
     letter-spacing: 10px;
     font-weight:bold;
     font-size:25px;
-    color:white;
+    color:black;
     text-align:center;
     font-family: fantasy;
 }
@@ -127,7 +127,7 @@ font-size:20px;
 .banner-text h1{
     margin-left:5px;
     font-size:50px;
-    color:blue;
+    color:black;
     text-align: center;
     font-family: 'Playfair Display', serif;
 }
