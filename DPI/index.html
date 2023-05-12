@@ -6,15 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Connect</title>
     <link rel="stylesheet" href="nycc.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=tinos">
 </head>
 <body>
-    <div class="container">
+      <!-- Banner -->
+      <div class="container">
         <div class="banner">
         <div class="banner-text">
             <h2>NYC CONNECT</h2>
             <h1>FIND ALL RESOURCES THAT YOU NEED IN YOUR COMMUNITY</h1>
+             </div>
+        </div>
+    </div>
+    <!-- Navigations -->
+    <div class="navbar">
+        <a href="#About">About</a>
+        <a href="#Target Audience">Target Audience</a>
+        <a href="#Map">Map</a>
+        <div class="dropdown">
+            <button class ="dropbutton"> Boroughs Resources
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Bronx</a>
+                <a href="#">Manhattan</a>
+                <a href="#">Brooklyn</a>
+                <a href="#">Queens</a>
+                <a href="#">Staten Island</a>
             </div>
         </div>
     </div>
+    <!-- Language Changing -->
+    <div class="cont">
+        <div class="langWrap">
+           <a href="#" language='english' class="active">EN</a>
+           <a href="#" language='spanish'>Espanol</a>
+           <a href="#" language='mandarin'>艾儿</a>
+           <a href="#" language='french'>Les Français</a>
+        </div>
+        </div>
+
+        <div class="content">
+            <h2 class="title">Welcome to the Website that you can find the resources that you need in your community</h2>
+            <p class="description">This website was created for NYC migrants that are still getting accustomed to living in New York City. We want to make sure you know all your clinics, restaurants, and stores to help make you feel comfortable as well as reassured that you are adapting well to New York City environment.</p>
+        </div>
+
+        <div class="mapcontent">
+            <title>Tableau Dashboard Demo</title>
+            <div class='tableauPlaceholder' id='viz1683906537817' style='position: relative'><noscript><a href='#'>
+            <img alt='NYC Immigration Resources: Click on the dots to find help near you! ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;W3&#47;W3Q67KJW4&#47;1_rss.png' style='border: none' /></a></noscript>
+            <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+             <param name='embed_code_version' value='3' /> 
+             <param name='path' value='shared&#47;W3Q67KJW4' /> 
+             <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;W3&#47;W3Q67KJW4&#47;1.png' /> <param name='animate_transition' value='yes' />
+             <param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+             <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+             <param name='language' value='en-US' /></object></div><script type='text/javascript'>
+              var divElement = document.getElementById('viz1683906537817');                    
+              var vizElement = divElement.getElementsByTagName('object')[0];                   
+             vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                   
+              var scriptElement = document.createElement('script');                  
+              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                  
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);       
+             </script>
+        </div>
+<script>
+
+const langEl = document.querySelector('.langWrap');
+const link = document.querySelectorAll('a');
+const titleEl = document.querySelector('.title');
+const descrEl = document.querySelector('.description');
+
+link.forEach(el=> {
+  el.addEventListener('click',()=>{
+    langEl.querySelector('.active').classList.remove('active');
+    el.classList.add('active');
+
+    const attr = el.getAttribute('language');
+
+    titleEl.textContent = data[attr].title;
+    descrEl.textContent = data[attr].description
+  })
+});
+
+var data = {
+    "english":
+    {
+        "title": "Welcome to the Website that you can find the resources that you need in your community",
+        "description":
+        "This website was created for NYC migrants that are still getting accustomed to living in New York City. We want to make sure you know all your clinics, restaurants, and stores to help make you feel comfortable as well as reassured that you are adapting well to New York City environment"
+    },
+    "spanish":
+    {
+        "title":"Bienvenido al Sitio Web para que puedas encontrar los recursos que necesitas en tu comunidad",
+        "description":
+        "Este sitio fue creado para inmigrantes de la ciudad de Nueva York que aún se están acostumbrando a vivir en la ciudad de Nueva York. Queremos asegurarnos de que conozca todas sus clínicas, restaurantes y tiendas para ayudarlo a sentirse cómodo y seguro de que le está yendo bien en la ciudad de Nueva York."
+    },
+    "mandarin" :
+    {
+          "title" :"欢迎访问本网站,您可以在社区中找到所需的资源",
+          "description": "这个网站是为仍然习惯在纽约市生活的纽约市移民创建的。我们希望确保您了解您所有的诊所、餐馆和商店，以帮助您感到舒适并放心您正在适应良好的环境到纽约市环境."
+    },
+    "french" :
+    {
+        "title":"Bienvenue sur le site Web où vous pouvez trouver les ressources dont vous avez besoin dans votre communauté",
+          "description":"Ce site Web a été créé pour les migrants de NYC qui s'habituent encore à vivre à NEW York. Nous voulons nous assurer que vous connaissez toutes vos cliniques, restaurants et magasins pour vous aider à vous sentir à l'aise et rassuré que vous vous adaptez bien à l'environnement de la ville de New York"
+    }
+};
+</script>
+
+
 </body>
 </html>
